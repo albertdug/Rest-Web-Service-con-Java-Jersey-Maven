@@ -32,6 +32,7 @@ public class MessageResource {
 		if (filterBean.getStart() >= 0 && filterBean.getSize() >= 0) {
 			return messageService.getAllMessagesPaginated(filterBean.getStart(), filterBean.getSize());
 		}
+		
 		return messageService.getAllMessages();
 	}
 	
