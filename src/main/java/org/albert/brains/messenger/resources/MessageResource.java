@@ -30,7 +30,7 @@ public class MessageResource {
 		if (year > 0) {
 			return messageService.getAllMessagesForYear(year);
 		}
-		if (start > 0 && size > 0) {
+		if (start >= 0 && size >= 0) {
 			return messageService.getAllMessagesPaginated(start, size);
 		}
 		return messageService.getAllMessages();
